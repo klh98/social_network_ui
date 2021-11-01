@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>social network</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+	<style type="text/css">
+		
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body{
+			background-color: #262938;
+		}
+
+		.sidebar li{
+			list-style: none;
+		}
+
+		.sidebar{
+		    overflow: scroll;
+		}
+		.nav-menu{
+
+		}
+
+		.sidebar i{
+			color: #FC2F7E;
+			margin-right: 10px;
+		}
+
+		.sidebar span{
+			color: white;
+			margin-left: 10px;
+		}
+
+		.sidebar ul{
+		    list-style: none;
+		    margin: 0;
+		    padding: 0;
+		}
+
+		.menu-item{
+		    padding: 5px;
+		}
+
+		/*.menu-item-link.active{
+		    background-color: var(--primary);
+		    color: white;
+		}*/
+
+		.menu-title{
+		    padding: 10px 0;
+		    text-transform: uppercase;
+		    font-weight: bold;
+		    color: #949494;
+		}
+
+		/*.menu-spacer{
+		    padding: 15px 0;
+		}*/
+
+		.menu-item-link{
+		    display: flex;
+		    justify-content: space-between;
+		    color: var(--dark);
+		    padding: 5px;
+		}
+
+		.menu-item-link:hover{
+		    background-color: lightgrey;
+		    text-decoration: none;
+		    color: var(--dark);
+		}
+
+		.head{
+			background-color: #FC2F7E;
+			height: 50px;
+		}
+
+		.one input{
+			border-radius: 20px;
+			margin-top: 10px;
+		}
+
+		.head i{
+			font-size: 30px;
+			color: white;
+			margin-right: 10px;
+		}
+
+		.two{
+			margin-left: 50px;
+		}
+
+
+		.two i{
+			color: white;
+			font-size: 30px;
+			margin-right: 120px;
+			margin-top: 10px;
+		}
+
+		.info input{
+			border-radius: 10px;
+			width: 80%;
+			height: 40px;
+			margin-left: 10px;
+		}
+
+		 p{
+			color: white;
+		}
+
+		.info2 i{
+			color: white;
+			font-size: 20px;
+			margin-right: 10px;
+		}
+
+		.info2{
+			background-color: #1B98E00D;
+			padding: 10px;
+			border-radius: 20px;
+		}
+
+		.post h5{
+			color: black;
+			font-weight: bolder;
+			margin-right: 10px;
+		}
+
+		.post p{
+			color: black;
+			text-align: justify;
+			line-height: 25px;
+		}
+
+		.post img{
+			margin-right: 20px;
+		}
+
+		.post i{
+			margin-right: 5px;
+		}
+
+		.post .btn{
+			background-color: #FC2F7E;
+			color: white;
+			margin-top: 20px;
+			width: 100px;
+			margin-right: 20px;
+		}
+
+		.btn{
+			margin-left: 40px;
+		}
+
+		.main{
+			overflow: scroll;
+		}
+
+		.list-group i{
+			font-size: 10px;
+			color: green;
+			margin-left: 30px;
+		}
+
+		.list-group img{
+			margin-right: 10px;
+		}
+
+		.list-group p{
+			margin-top: 10px;
+
+		}
+
+		.list-group .btn{
+			background-color: #FC2F7E;
+			color: white;
+		}
+
+		footer{
+			width: 100%;
+			height: 100px;
+			background-color: #FC2F7E;
+			color: white;
+			padding: 50px 500px;
+			/*padding-left: 300px;*/
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="container-fluid one">
+		<div class="row">
+			<div class="container-fluid head">
+				<div class="row">
+					<div class="col-12 col-md-3 col-lg-3 one">
+						<i class="fab fa-facebook"></i>
+						<input type="text" name="" placeholder="Search Friends">
+					</div>
+					<div class="col-12 col-md-6 col-lg-6 two">
+						<i class="fas fa-home"></i>
+						<i class="fas fa-video"></i>
+						<i class="fas fa-users"></i>
+						<i class="fas fa-desktop"></i>
+					</div>
+					<div class="col-12 col-md-3 col-lg-3"></div>
+				</div>
+			</div>
+			</div>
+		<div class="row">
+			<div class="col-12 col-md-3 col-lg-3">
+				<div class="sidebar">
+					<ul>
+						<li class="menu-title">
+							<span>Profile</span>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link active">
+								<span>
+									<i class="fas fa-home"></i>
+									Home
+								</span>
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+						
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="far fa-newspaper"></i>
+									Newsfeed
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="far fa-sticky-note"></i>
+									Message
+								</span> 
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+							
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-calendar-week"></i>
+									Events
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-user"></i>
+									Profile
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+						
+						<li class="menu-title">
+							<span>Setting</span>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-cog"></i>
+									Setting
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-calendar"></i>
+									Calendar
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+
+						
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-key"></i>
+									Password
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-unlock-alt"></i>
+									Security
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+				
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-envelope"></i>
+									Email
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-briefcase"></i>
+									Work
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-university"></i>
+									Education
+								</span>
+							</a>
+						</li>
+
+
+						<li class="menu-title">
+							<span>Features</span>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-hotel"></i>
+									Place
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+						
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-truck"></i>
+									Delivery
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-map-marker-alt"></i>
+									Location
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+
+						
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-book-open"></i>
+									Activity Log
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-link">
+								<span>
+									<i class="fas fa-power-off"></i>
+									Log Out
+								</span>
+
+							</a>
+						</li>
+						<li class="menu-spacer"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-12 col-md-6 col-lg-6 main">
+				<div class="row mt-3 info">
+					<div class="col-12 col-md-12 col-lg-12">
+						<img src="img/user/avatar1.jpg" width="10%" style="border-radius:50%">
+						<input type="text" name="" placeholder="What is on your mind?">
+					</div>
+				</div>
+
+				<div class="row info2 mt-3">
+					<div class="col-12 col-md-4 col-lg-4 ">
+						<p><i class="fas fa-camera-retro"></i>Photo/Video</p>
+					</div>
+					<div class="col-12 col-md-4 col-lg-4">
+						<p><i class="fas fa-user"></i>Friends</p>
+					</div>
+					<div class="col-12 col-md-4 col-lg-4">
+						<p><i class="fas fa-tags"></i>Tag Users</p>
+					</div>
+				</div>
+
+				<div class="row post mt-3">
+					<div class="col-12 col-md-12 col-lg-12">
+						<div class="card">
+							<div class="card-body">
+								<h5><img src="img/user/avatar3.jpg" width="10%">Kyaung Lan Htan</h5>
+								<p class="text-muted"><i class="fas fa-clock"></i>1hr ago</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								<img src="img/item/home2.png">
+								<div class="">
+								<button class="btn btn-md">Like</button>
+								<button class="btn btn-md">Comment</button>
+								<button class="btn btn-md">Share</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row post mt-3">
+					<div class="col-12 col-md-12 col-lg-12">
+						<div class="card">
+							<div class="card-body">
+								<h5><img src="img/user/avatar3.jpg" width="10%">Kyaung Lan Htan</h5>
+								<p class="text-muted"><i class="fas fa-clock"></i>1hr ago</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								<img src="img/item/home2.png">
+								<div class="">
+								<button class="btn btn-md">Like</button>
+								<button class="btn btn-md">Comment</button>
+								<button class="btn btn-md">Share</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row post mt-3">
+					<div class="col-12 col-md-12 col-lg-12">
+						<div class="card">
+							<div class="card-body">
+								<h5><img src="img/user/avatar3.jpg" width="10%">Kyaung Lan Htan</h5>
+								<p class="text-muted"><i class="fas fa-clock"></i>1hr ago</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								<img src="img/item/home2.png">
+								<div class="">
+								<button class="btn btn-md">Like</button>
+								<button class="btn btn-md">Comment</button>
+								<button class="btn btn-md">Share</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-3 col-lg-3 mt-3">
+				<h3 class="mb-3" style="color: white;">Contact</h3>
+				<ul class="list-group">
+				  	<li class="list-group-item">
+					  	<img src="img/user/avatar4.jpg" width="10%">
+					  	Aung Aung
+					  	<p class="text-muted">
+					  		12 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>	  	
+					</li>
+				  	<li class="list-group-item">
+					  	<img src="img/user/avatar5.jpg" width="10%">
+					  	Kyaw Kyaw
+					  	<p class="text-muted">
+					  		8 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>
+					</li>
+					<li class="list-group-item">
+					  	<img src="img/user/avatar3.jpg" width="10%">
+					  	Zaw Zaw 
+					  	<p class="text-muted">
+					  		10 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>
+					</li>
+					<li class="list-group-item">
+					  	<img src="img/user/avatar7.jpg" width="10%">
+					  	Tun Tun 
+					  	<p class="text-muted">
+					  		6 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>
+					</li>
+					<li class="list-group-item">
+					  	<img src="img/user/avatar1.jpg" width="10%">
+					  	Aye Aye
+					  	<p class="text-muted">
+					  		12 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>
+					</li>
+					<li class="list-group-item">
+					  	<img src="img/user/avatar6.jpg" width="10%">
+					  	Su Su
+					  	<p class="text-muted">
+					  		5 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>
+					</li>
+					<li class="list-group-item">
+					  	<img src="img/user/avatar2.jpg" width="10%">
+					  	Mg Mg
+					  	<p class="text-muted">
+					  		16 mutual friends
+					  		<button class="btn btn-sm">Add Friends</button>
+					  	</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		&copy;2021 developed with &hearts; by Kyaung Lan Htan
+	</footer>
+</body>
+</html>
